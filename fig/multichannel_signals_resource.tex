@@ -1,0 +1,52 @@
+\begin{figure}
+\begin{columns}
+\begin{column}{0.02\textwidth}
+\rotatebox{90}{Level 2}
+\end{column}
+\begin{column}{0.49\textwidth}
+    \centering
+    \foreach \n in {1,...,12}{%
+    \includegraphics<\n>[width=\textwidth,trim={0 0 0 250},clip]{big_res/frame-\n.png}%
+    }%
+\end{column}
+\begin{column}{0.49\textwidth}
+  \centering
+  \foreach \n in {1,...,12}{%
+  \includegraphics<\n>[width=\textwidth,trim={0 0 0 250},clip]{big_sig/frame-\n.png}%
+  }%
+\end{column}
+\end{columns}%
+\vspace{2ex}
+\begin{columns}
+\begin{column}{0.02\textwidth}
+  \rotatebox{90}{Level 1}
+\end{column}
+\begin{column}{0.49\textwidth}
+    \centering
+    \foreach \n in {1,...,12}{%
+    \includegraphics<\n>[width=\textwidth,trim={0 0 0 250},clip]{small_res/frame-\n.png}%
+    }%
+\end{column}
+\begin{column}{0.49\textwidth}
+  \centering
+  \foreach \n in {1,...,12}{%
+  \includegraphics<\n>[width=\textwidth,trim={0 0 0 250},clip]{small_sig/frame-\n.png}%
+  }%
+\end{column}
+\end{columns}%
+\begin{columns}
+\begin{column}{0.02\textwidth}
+\end{column}
+\begin{column}{0.49\textwidth}
+\begin{subfigure}[b]{\textwidth}
+  \caption{resource}
+\end{subfigure}
+\end{column}
+\begin{column}{0.49\textwidth}
+\begin{subfigure}[b]{\textwidth}
+\caption{activation-quiescence signals}
+\end{subfigure}
+\end{column}
+\end{columns}
+\caption{Co-visualization of same-channel signaling and resource distribution.}
+\end{figure}

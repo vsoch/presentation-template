@@ -1,0 +1,27 @@
+\begin{figure}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+    \foreach \n in {1,...,12}{%
+    \includegraphics<\n>[width=\textwidth]{small_res/frame-\n.png}%
+    }%
+\end{column}
+\begin{column}{0.5\textwidth}
+    \foreach \n in {1,...,12}{%
+    \includegraphics<\n>[width=\textwidth]{small_sig/frame-\n.png}%
+    }%
+\end{column}
+\end{columns}%
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{subfigure}[b]{\textwidth}
+  \caption{resource}
+\end{subfigure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{subfigure}[b]{\textwidth}
+\caption{activation-quiescence signals}
+\end{subfigure}
+\end{column}
+\end{columns}
+\caption{Co-visualization of same-channel signaling and resource distribution.}
+\end{figure}
