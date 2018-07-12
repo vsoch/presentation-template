@@ -10,6 +10,9 @@ view:
 sview:
 	gnome-open ${BUILD_DIR}.pdf 2>/dev/null
 
+present:
+	pdfpc ${BUILD_DIR}.pdf -d 25 -p
+
 ${BUILD_DIR}.pdf: main.tex
 	latexmk -pdf -silent \
     -jobname=${BUILD_DIR} \
