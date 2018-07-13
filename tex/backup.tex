@@ -1,0 +1,51 @@
+\begin{frame}{Scrabble Result: Evolvability Signature}
+
+\input{fig/scrabble_es_kde.tex}
+
+\end{frame}
+
+\begin{frame}{Toy Result: Evolvability Signature}
+
+\input{fig/all_es.tex}
+
+\end{frame}
+
+\begin{frame}{Evolutionary Algorithm Parameters: Toy Problem}
+
+\begin{itemize}
+\item population size: 300
+\item tournament selection: $k = 5$
+\item crossover: two-point, two-parent, $p = 0.5$
+\item mutation: site-wise Gaussian perturbation
+\begin{itemize}
+\item training data, evolvability-signature experiments: $\mu = 0$, $\sigma = 0.1$, per-individual
+probability = 0.2, per-site probability = 0.01
+\item response-to-selection experiments: $\mu = 0$, $\sigma = 0.1$, per-individual probability = 0.2, per-site probability = 0.2 %TODO check this
+\footnote{for the bottleneck map, a per-site probability of 1 was employed}
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Denoising Autoencoder Hyperparameters: Toy Problem}
+
+\begin{itemize}
+\item 100-to-100 fully-connected linear layer without bias
+\item trained for 2500 epochs by stochastic gradient descent
+\item learning rate: $10^{−4}$
+\item momentum: 0.9
+\item batch size: 2048
+\item model parameters initialized uniformly between 0.005 and 0.015
+\item model parameters clamped in the range (0, 1
+\item during the training process, Gaussian
+  noise with $\mu = 0$, $\sigma = 0.025$ applied to input
+\item loss: mean square error of the difference between the original phenotype the reconstructed phenotype
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Evolutionary Algorithm Parameters: Scrabble Problem}
+
+TODO
+
+\end{frame}

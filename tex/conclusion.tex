@@ -6,6 +6,26 @@
 
 \begin{frame}{Challenges (\& Solutions?)}
 
+Unfortunately, autoencoder design and training itself typically
+requires skilled human input; AutoMap cannot entirely sidestep the
+need for manual labor. Indeed, the question of how to adapt autoen-
+coder architecture and training to a less well-understood domain is
+nontrivial. For example, questions such as “What should the size
+of the bottleneck be for a bottlenecked autoencoder?” or “What
+type of noise should a denoising autoencoder be trained with?”
+will need to be addressed in any application of AutoMap. It should
+also be noted that the success of AutoMap in any problem domain
+depends on the computational capacity to generate large amounts
+of training data through direct evolution and a willingness to accept
+the computational cost of performing a forward pass through the
+autoencoder component for each fitness evaluation when evolving
+with a learned genotype-phenotype map. Domains where evolu-
+tion with pre-existing encodings generate poor solutions, repeated
+cycles of autoencoder training and generation of new training data
+via evolution might be necessary to yield satisfactory performance.
+
+chicken \& egg: iterative bootstrapping
+
 \end{frame}
 
 \begin{frame}{Next Steps}

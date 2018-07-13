@@ -1,1 +1,110 @@
 \section{Experiment: Scrabble String Problem}
+
+\begin{frame}{Experiment}
+
+reviewer comment on param settings
+
+\end{frame}
+
+\begin{frame}{Denoiser Map Implementation}
+
+\input{fig/scrabble_denoiser_in_action.tex}
+
+\end{frame}
+
+\begin{frame}{Training Data}
+
+%bold monospaced TODO
+
+\centering \Large
+
+$\downarrow$ evolve word strings $\downarrow$
+
+\dots\texttt{ns fed oxo sob }\dots
+
+$\downarrow$ corrupt letter (sometimes) $\downarrow$
+
+\dots\texttt{ns fed \fbox{o}xo sob }\dots
+
+$\downarrow$ autoencoder guesses original letter $\downarrow$
+
+\dots\texttt{ns fed \fbox{o}xo sob }\dots
+
+$\downarrow$ check guess $\downarrow$
+
+if wrong, adjust autoencoder
+
+\end{frame}
+
+\begin{frame}{Training Data}
+
+%bold monospaced TODO
+
+\centering \Huge
+
+\dots\texttt{ns fed \fbox{o}xo sob }\dots
+
+$\downarrow$
+
+\dots\texttt{ns fed \fbox{o}xo sob }\dots
+
+\end{frame}
+
+
+
+
+\begin{frame}{Intuition: Glorified Spell-Checker}
+
+\centering \Huge
+
+\dots\texttt{la lob ~re as s}\dots
+
+$\downarrow$
+
+\dots\texttt{la lob \fbox{o}re as s}\dots
+
+\end{frame}
+
+\begin{frame}{Intuition: Glorified Spell-Checker}
+
+\centering \Huge
+
+\dots\texttt{lk y ag\fbox{x}r sned }\dots
+
+$\downarrow$
+
+\dots\texttt{lk y ag\fbox{a}r sned }\dots
+
+\end{frame}
+
+%TODO check words
+
+\begin{frame}{Intuition: Glorified Spell-Checker}
+
+\centering \Huge
+
+\dots\texttt{tils r\fbox{a}t ~vow }\dots
+
+$\downarrow$
+
+\dots\texttt{tils r\fbox{t}t ~vow }\dots
+
+\end{frame}
+
+\begin{frame}{Result: Viability under Mutation}
+
+\input{fig/scrabble_fit_diff_vs_step.tex}
+
+\end{frame}
+
+\begin{frame}{Result: Novelty under Mutation}
+
+\input{fig/scrabble_dist_vs_step.tex}
+
+\end{frame}
+
+\begin{frame}{Result: Fitness}
+
+\input{fig/scrabble_fit_vs_gen.tex}
+
+\end{frame}

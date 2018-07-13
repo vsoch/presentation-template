@@ -25,7 +25,7 @@ TODO Police Artist 1
 
 \end{frame}
 
-\begin{frame}{Autoencoder Intuition: Bottleneck}
+\begin{frame}{Autoencoder Intuition: Bottlenecked}
 
 Why does this work?
 
@@ -38,24 +38,60 @@ Why does this work?
 
 \end{frame}
 
-\begin{frame}{Autoencoder Intuition: Example}
+\begin{frame}{Autoencoder Example: Bottlenecked}
 
 face montage
 
 \end{frame}
 
-\begin{frame}{Autoencoder Intuition: Example}
+\begin{frame}{Autoencoder Example: Bottlenecked}
 
 what is a latent-space interpolation?
 
 \end{frame}
 
-\begin{frame}{Autoencoder Intuition}
+\begin{frame}{Autoencoder Intuition: Denoiser}
+
+TODO Police Artist 2
+
+\end{frame}
+
+\begin{frame}{Autoencoder Intuition: Denoiser}
+
+Why does this work?
+
+\begin{itemize}
+
+\item faces are a \textit{subset} of all possible images
+\item symmetries, correlations, and certain universal characteristics of faces $\rightarrow$ fix incomplete/corrupted input
+\begin{itemize}
+\item usually, eye color is same left/right
+\item blue eyes correlated with blond hair
+\item faces have same general eye-nose-mouth layout
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Autoencoder Intuition: Example}
+
+face reconstruction
+
+\end{frame}
+
+\begin{frame}{Autoencoder Implementation}
 
 How exactly does this all work?
 
 deep learning
 
 (a.k.a. big artificial neural networks tuned with lots of training data)
+
+\end{frame}
+
+\begin{frame}{Autoencoder Implementation}
+
+\input{fig/autoencoders.tex}
 
 \end{frame}
